@@ -1,0 +1,21 @@
+@import "../../../styles/font-size";
+
+.error-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  .error-image {
+    height: 240px;
+  }
+  .error-title {
+    font-family: "Inter", sans-serif;
+    font-size: $subtitle2-font-size;
+    font-weight: 700;
+  }
+  .error-message {
+    font-family: "Inter", sans-serif;
+    font-size: $caption-font-size;
+  }
+}

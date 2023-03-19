@@ -1,0 +1,10 @@
+@import "../../../styles/font-size";
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter", sans-serif;
+  font-size: $caption-font-size;
+}

@@ -1,0 +1,60 @@
+@import "../../styles/media-queries";
+@import "../../styles/font-size";
+
+.current-weather-details {
+  @include mobile-small-portrait {
+    grid-column: span 4;
+    grid-row: 4;
+  }
+  @include mobile-small-landscape {
+    grid-column: span 2;
+    grid-row: 3;
+  }
+  @include mobile-portrait {
+    grid-column: span 4;
+    grid-row: 4;
+  }
+  @include mobile-landscape {
+    grid-column: span 2;
+    grid-row: 3;
+  }
+  @include tablet-portrait {
+    grid-column: span 4;
+    grid-row: 4;
+  }
+  @include tablet-landscape {
+    grid-column: span 2;
+    grid-row: 3;
+  }
+  @include desktop {
+    grid-column: span 2;
+    grid-row: 3;
+  }
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.25s ease;
+  .current-weather-details-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 0;
+    column-gap: 15px;
+    padding: 5px 15px;
+    .current-weather-details-grid-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 30px;
+      label:first-child {
+        font-family: "Inter", sans-serif;
+        font-size: $body2-font-size;
+      }
+      label:last-child {
+        font-family: "Inter", sans-serif;
+        font-size: $body2-font-size;
+      }
+    }
+  }
+}
