@@ -5,7 +5,7 @@ import { defaultLocationModel, LocationModel } from "../models";
 
 export const useLocation = (locationName: string) => {
   const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
-  const geocodeBaseUrl = process.env.REACT_APP_OPENWEATHER_API_KEY;
+  const geocodeBaseUrl = process.env.REACT_APP_OPENWEATHER_GEOCODE_URL;
 
   const [location, setLocation] = useState<LocationModel>(defaultLocationModel);
   const handleError = useErrorHandler();
@@ -15,7 +15,6 @@ export const useLocation = (locationName: string) => {
       axios
         .get(`${geocodeBaseUrl}?q=${locationName}&limit=1&appid=${apiKey}`)
         .then((res: any) => {
-          console.log(res);
           if (res.data && res.data[0]) {
             const location = res.data[0];
             const formattedAddress = location.name;
